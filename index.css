@@ -18,7 +18,7 @@ img {
     border:2px solid black;
 }*/
 #Footer{
-            position:absolute;
+            position:fixed;
             bottom:0;
             font-size: 9pt;
             padding: 5px;
@@ -27,6 +27,9 @@ img {
             color:white;
 
         }
+#Resume{
+            text-align:center;
+}
 .tab button{
             font-size:11pt;
             font-family:cursive;
