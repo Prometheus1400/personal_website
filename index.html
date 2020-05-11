@@ -1,56 +1,38 @@
 <html>
   <head>
     <title>Kaleb's Website</title>
-    <style type="text/css">
-        #grad1 {
-                height: 200px;
-                background-image: linear-gradient(to right, red , blue);
-                }
-        h2{
-            background-color: darkslategray;
-            padding: 15px;
-            border:3px solid darkgray;
-            color:white;
-            text-align:center;
-
-          }
-        p {
-            
-          }
-       img {
-                    border:2px solid darkgray;
-                    padding: 10px;
-                    background-color:lightgrey;
-              }   
-
-        #Footer{
-                    position:absolute;
-                    bottom:0;
-                    font-size: 9pt;
-                    padding: 5px;
-                    border:2px solid darkgray;
-                    background-color:darkslategray;
-                    color:white;
-
-                }
-    </style>
+    <link rel="stylesheet" href="index.css">
   </head>
   <body style="background-color:lightgray;">
+  <script src="index.js"></script>
     <h2>Welcome To My Website!
         <p>
         <img src="https://lh3.googleusercontent.com/-RsuZiYwyAbM/AAAAAAAAAAI/AAAAAAAAAAA/M9AfPTlwps0/s128-c-k/photo.jpg" alt="Profile Picture" height="108" width="108">
         </p>
+        <div class="tab">
+            <button class="HeaderButton" onclick="OpenTab(event,'About Me')" id="defaultopen">About Me</button>
+            <button class="HeaderButton" onclick="OpenTab(event,'Resume')">Resume</button>
+            <button class="HeaderButton" onclick="OpenTab(event,'Contact Info')">Contact Info</button>
+        </div>
     </h2>
-    <p>
-	Hello! My name is Kaleb Dickerson, and I am a 19 year old Chemical Engineering student at Texas A&M University.
-    You may notice this website is a little bit rough, but that is because I made it myself!
-    </p>
-    Here is my contact info. Please feel free to contact me!
-    <ul>
-        <li>Phone number: (512)-801-1561</li>
-        <li>Email: Prometheus1400@gmail.com</li>
-    </ul>
-    <p>You can view my resume by clicking <a href="https://drive.google.com/file/d/1wrvetXHhh3ucf2gcGvxYopAys9xBPjFD/view?usp=sharing">here</a>.</p>
+
+    <div class="content" id="About Me" style="display:block">
+        <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+        Hello! My name is Kaleb Dickerson, and I am a 19 year old Chemical Engineering student at Texas A&M University.
+        You may notice this website is a little bit rough, but that is because I made it myself!
+    </div>
+    <div class="content" id="Resume" style="display:none">
+        <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+        You can view my resume by clicking <a href="https://drive.google.com/file/d/1wrvetXHhh3ucf2gcGvxYopAys9xBPjFD/view?usp=sharing">here</a>
+    </div>
+    <div class="content" id="Contact Info" style="display:none">
+        <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+        Here is my contact info. Please feel free to contact me!
+        <ul>
+            <li>Phone number: (512)-801-1561</li>
+            <li>Email: Prometheus1400@gmail.com</li>
+        </ul>
+    </div>
     <div id="Footer">
     <p>
     This is all still a work in progress
