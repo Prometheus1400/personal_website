@@ -1,0 +1,53 @@
+h2{
+    background-color: darkslategray;
+    padding: 15px;
+    border:3px solid darkgray;
+    color:white;
+    text-align:center;
+
+  }
+p {
+    
+  }
+img {
+            border:2px solid darkgray;
+            padding: 10px;
+            background-color:lightgrey;
+      }   
+/*div.content{
+    border:2px solid black;
+}*/
+#Footer{
+            position:absolute;
+            bottom:0;
+            font-size: 9pt;
+            padding: 5px;
+            border:2px solid darkgray;
+            background-color:darkslategray;
+            color:white;
+
+        }
+.tab button{
+            font-size:11pt;
+            font-family:cursive;
+            border: 1.5px solid darkgray;
+            background-color:whitesmoke;
+}
+.tab button:hover{
+            background-color:lightgray;
+
+}
+.tab button.active {
+            background-color:darkgray;
+}
+.topright{
+    position:absolute;
+    right:10px;
+    top:290px;
+    cursor:pointer;
+    font-size:24pt;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.topright:hover{
+    color:red;
+}
