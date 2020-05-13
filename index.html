@@ -3,14 +3,14 @@
     <title>Kaleb's Website</title>
     <link rel="stylesheet" href="index.css">
   </head>
-  <body style="background-color:lightgray;">
+  <body>
   <script src="index.js"></script>
     <h2>Welcome To My Website!
         <p>
         <img src="https://lh3.googleusercontent.com/-RsuZiYwyAbM/AAAAAAAAAAI/AAAAAAAAAAA/M9AfPTlwps0/s128-c-k/photo.jpg" alt="Profile Picture" height="108" width="108">
         </p>
         <div class="tab">
-            <button class="HeaderButton" onclick="OpenTab(event,'About Me')" id="defaultopen">About Me</button>
+            <button class="HeaderButton active" onclick="OpenTab(event,'About Me')" id="defaultopen">About Me</button>
             <button class="HeaderButton" onclick="OpenTab(event,'Resume')">Resume</button>
             <button class="HeaderButton" onclick="OpenTab(event,'Contact Info')">Contact Info</button>
         </div>
@@ -23,7 +23,7 @@
     </div>
     <div class="content" id="Resume" style="display:none">
         <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-    	<embed src="Resume.pdf" width="1000" height="800" type="application/pdf">
+        <embed src="Resume.pdf" width="1000" height="800" type="application/pdf">
     </div>
     <div class="content" id="Contact Info" style="display:none">
         <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
