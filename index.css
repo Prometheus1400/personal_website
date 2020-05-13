@@ -1,6 +1,5 @@
 h2{
     background-color: darkslategray;
-    padding: 15px;
     border:3px solid darkgray;
     color:white;
     text-align:center;
@@ -16,10 +15,14 @@ img {
             border:2px solid darkgray;
             padding: 10px;
             background-color:lightgrey;
-      }   
+      }
+div.parent{
+            position:relative;
+}   
 div.tab{
             position:absolute;
-            bottom:485px;
+            left:0;
+            bottom:-3px;
 }
 #Footer{
             position:fixed;
