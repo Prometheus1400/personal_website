@@ -1,10 +1,12 @@
 h2{
     background-color: darkslategray;
-    padding: 15px;
     border:3px solid darkgray;
     color:white;
     text-align:center;
 
+  }
+  body{
+            background-color:lightgray;
   }
 p {
     
@@ -13,12 +15,17 @@ img {
             border:2px solid darkgray;
             padding: 10px;
             background-color:lightgrey;
-      }   
-/*div.content{
-    border:2px solid black;
-}*/
-#Footer{
+      }
+div.parent{
+            position:relative;
+}   
+div.tab{
             position:absolute;
+            left:0;
+            bottom:-3px;
+}
+#Footer{
+            position:fixed;
             bottom:0;
             font-size: 9pt;
             padding: 5px;
@@ -27,6 +34,12 @@ img {
             color:white;
 
         }
+#Resume{
+            text-align:center;
+}
+.tab button:focus{
+            outline:0;
+}
 .tab button{
             font-size:11pt;
             font-family:cursive;
@@ -34,11 +47,12 @@ img {
             background-color:whitesmoke;
 }
 .tab button:hover{
-            background-color:lightgray;
+            background-color:rgba(247, 243, 243, 0.911);
 
 }
 .tab button.active {
-            background-color:darkgray;
+            background-color:lightgray;
+            border-bottom:3px solid lightgray;
 }
 .topright{
     position:absolute;
