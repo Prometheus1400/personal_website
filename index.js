@@ -1,17 +1,13 @@
-function OpenTab(evt,label){
-    var i, content, chosen, buttons;
-    content = document.getElementsByClassName("content")
-    for(i=0; i < content.length; i++){
-        content[i].style.display = "none";
-    }
+function Toggle_Resume(){
+	var resume = document.getElementById("Resume");
+	var resume_stat = resume.style.display;
+	console.log(resume_stat);
 
-    buttons = document.getElementsByClassName("HeaderButton");
-    for(i=0; i < buttons.length; i++){
-        buttons[i].className = buttons[i].className.replace(" active","");
-    }
-    chosen = document.getElementById(label);
-    chosen.style.display="block";
-    evt.currentTarget.className += " active";
-    console.log("you found my easter egg");
-
+	if(resume_stat == "none"){
+		resume.style.display = "block";
+		console.log('t');
+	}
+	else{
+		resume.style.display = "none";
+	}
 }
