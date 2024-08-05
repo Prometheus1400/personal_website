@@ -44,11 +44,12 @@ htmx.on("htmx:beforeRequest", function(evt) {
 
     const homeEl = document.getElementById("home-selector")
     const aboutEl = document.getElementById("about-selector")
-
-    homeEl.classList.remove("text-orange-300")
-    homeEl.classList.add("text-gray-300")
-    aboutEl.classList.remove("text-orange-300")
-    aboutEl.classList.add("text-gray-300")
+    const projectEl = document.getElementById("projects-selector")
+    const els = [homeEl, aboutEl, projectEl]
+    for (el of els) {
+        el.classList.remove("text-orange-300")
+        el.classList.add("text-gray-300")
+    }
 
     const element = document.getElementById(id)
     element.classList.remove("text-gray-300")
