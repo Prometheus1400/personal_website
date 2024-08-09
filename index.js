@@ -1,34 +1,34 @@
-function Toggle_Resume(){
-	var resume = document.getElementById("Resume");
-	var resume_stat = resume.style.display;
+// function Toggle_Resume(){
+// 	var resume = document.getElementById("Resume");
+// 	var resume_stat = resume.style.display;
 
-	if(resume_stat == "none"){
-		resume.style.display = "block";
-	}
-	else{
-		resume.style.display = "none";
-	}
-}
+// 	if(resume_stat == "none"){
+// 		resume.style.display = "block";
+// 	}
+// 	else{
+// 		resume.style.display = "none";
+// 	}
+// }
 
-// Open and close sidebar
-function openNav() {
-  document.getElementById("mySidebar").style.width = "60%";
-  document.getElementById("mySidebar").style.display = "block";
-}
+// // Open and close sidebar
+// function openNav() {
+//   document.getElementById("mySidebar").style.width = "60%";
+//   document.getElementById("mySidebar").style.display = "block";
+// }
 
-function closeNav() {
-  document.getElementById("mySidebar").style.display = "none";
-}
+// function closeNav() {
+//   document.getElementById("mySidebar").style.display = "none";
+// }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const elements = document.querySelectorAll('.fade-in');
-    elements.forEach((element, index) => {
-        setTimeout(() => {
-            element.classList.remove('opacity-0');
-            element.classList.add('opacity-100');
-        }, 1000 * (index));
-    });
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     const elements = document.querySelectorAll('.fade-in');
+//     elements.forEach((element, index) => {
+//         setTimeout(() => {
+//             element.classList.remove('opacity-0');
+//             element.classList.add('opacity-100');
+//         }, 1000 * (index));
+//     });
+// });
 
 htmx.on("htmx:afterSwap", function(evt) {
     const elements = document.querySelectorAll('.fade-in');
