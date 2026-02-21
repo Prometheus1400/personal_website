@@ -1,35 +1,74 @@
-<div id="home" class="flex flex-row justify-center h-screen ">
-    <div class="w-1/4 aspect-square flex flex-col items-center justify-center">
-        <img class="rounded-full transition" src="static/Me_Headshot.png" alt="headshot picture" />
-    </div>
-    <!-- <div class="flex flex-col gap-5 items-center justify-center p-32"> -->
-    <!--     <h1 class="flex justify-center text-6xl opacity-0 transition-opacity duration-1000 fade-in"><b>Kaleb -->
-    <!--             Dickerson</b></h1> -->
-    <!--     <p class="flex justify-center opacity-0 transition-opacity duration-1000 fade-in">Sofware Engineer -->
-    <!--         at Apple in Austin, Texas</p> -->
-    <!--     <form class="flex justify-center" method="get" action="static/Kaleb_Dickerson_Resume.pdf"> -->
-    <!--         <button -->
-    <!--             class="hover:animate-pulse bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center opacity-0 transition-opacity duration-1000 fade-in"> -->
-    <!--             <span>View Resume</span> -->
-    <!--         </button> -->
-    <!--     </form> -->
-    <!-- </div> -->
-    <div id="about" class="flex flex-col items-center justify-center w-2/4">
-        <!-- <h2 class="text-3xl p-16">About</h2> -->
-        <!-- <h2 class="flex justify-center text-6xl opacity-0 transition-opacity duration-1000 fade-in"><b>About</b></h2> -->
-        <!-- <hr class="my-4" /> -->
-        <div class="px-8 ">
-            <p class="opacity-0 transition-opacity duration-1000 fade-in">
-                Hello it's great to meet you! My name is Kaleb Dickerson and I am currently a junior Software Engineer at Apple in Austin, Texas.
-                I'm very passionate about software and programming (unfortunately frontend is not my forte so DON'T visit this site on mobile).
-                Right now I'm very into Neovim and terminal based workflows, there's just something about spamming a mechanical keyboard and seeing stuff get done!
-                I'm also very interested in programming languages and their implementations as well as compilers and interpreters (JITs are insane!!).
+<section class="min-h-[calc(100vh-4rem)] px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl">
+        <h1 class="animate-fade-in-up text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            About Me
+        </h1>
+        
+        <div class="animate-fade-in-up delay-100 mt-8 space-y-6 text-lg leading-relaxed text-gray-300">
+            <p>
+                Hi, I'm Kaleb! I'm a Software Engineer at <span class="font-semibold text-white">Apple</span> in Austin, Texas. 
+                I'm passionate about building software that makes a difference — from low-level systems to developer tools.
             </p>
-            <p class="opacity-0 transition-opacity duration-1000 fade-in">
-            Outside of work you can usually find me at the gym. I love bodybuilding, both the sport and the activity, and I even have a fitness page which you can check out <a class="text-orange-300 hover:text-blue-700 underline" href="https://www.instagram.com/kalebdickerson_fit?igsh=MWpsZ3EzY205dDUyeQ%3D%3D&utm_source=qr">here</a>.
-                I'll post some new content eventually...
-                I'm also an avid fantasy reader, if you've never heard of The Stormlight Archives series by Brandon Sanderson you're missing out.
+            
+            <p>
+                My technical interests lean heavily into <span class="text-primary">programming languages</span>, 
+                <span class="text-primary">compilers</span>, and <span class="text-primary">interpreters</span>. 
+                JIT compilation fascinates me — the marriage of static and dynamic optimization is genuinely incredible.
+            </p>
+            
+            <p>
+                I'm also a terminal-native developer. Neovim is my editor of choice, and I love the efficiency of 
+                keyboard-driven workflows. There's something deeply satisfying about the rhythm of a mechanical keyboard 
+                and watching complex operations unfold in a terminal.
             </p>
         </div>
+        
+        <div class="animate-fade-in-up delay-200 mt-10">
+            <h2 class="text-xl font-semibold text-white">Beyond Code</h2>
+            <div class="mt-4 space-y-4 text-gray-300">
+                <p>
+                    When I'm not coding, you'll find me at the gym. I'm passionate about 
+                    <span class="font-semibold text-white">bodybuilding</span> — both the sport and the lifestyle. 
+                    I even run a fitness Instagram where I (occasionally) post content: 
+                    <a href="https://www.instagram.com/kalebdickerson_fit" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="link-animated text-primary hover:text-amber-300">
+                        @kalebdickerson_fit
+                    </a>
+                </p>
+                
+                <p>
+                    I'm also an avid fantasy reader. If you haven't read 
+                    <a href="https://www.brandonsanderson.com/the-stormlight-archive-series/" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="link-animated text-primary hover:text-amber-300">
+                        The Stormlight Archives
+                    </a> 
+                    by Brandon Sanderson, you're missing out on one of the greatest epic fantasy series ever written. 
+                    Life before death, radiant.
+                </p>
+            </div>
+        </div>
+        
+        <div class="animate-fade-in-up delay-300 mt-10 flex flex-wrap gap-3">
+            <span class="inline-flex items-center rounded-full bg-gray-800 px-3 py-1 text-sm text-gray-300">
+                <span class="mr-2 h-2 w-2 rounded-full bg-green-400"></span>
+                C/C++
+            </span>
+            <span class="inline-flex items-center rounded-full bg-gray-800 px-3 py-1 text-sm text-gray-300">
+                <span class="mr-2 h-2 w-2 rounded-full bg-blue-400"></span>
+                Python
+            </span>
+            <span class="inline-flex items-center rounded-full bg-gray-800 px-3 py-1 text-sm text-gray-300">
+                <span class="mr-2 h-2 w-2 rounded-full bg-yellow-400"></span>
+                JavaScript/TypeScript
+            </span>
+            <span class="inline-flex items-center rounded-full bg-gray-800 px-3 py-1 text-sm text-gray-300">
+                <span class="mr-2 h-2 w-2 rounded-full bg-purple-400"></span>
+                Neovim
+            </span>
+        </div>
     </div>
-</div>
+</section>
