@@ -1,18 +1,7 @@
-/** 
- * Personal Website Styles
- * Clean, modern, minimal
- */
+/* Catppuccin Mocha Theme Styles */
 
-/* Base reset */
 html {
-    box-sizing: border-box;
     scroll-behavior: smooth;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
 }
 
 body {
@@ -20,7 +9,13 @@ body {
     padding: 0;
 }
 
-/* Animation utilities */
+/* Navigation active state */
+.nav-link.active {
+    color: #b4befe;
+    background-color: rgba(69, 71, 90, 0.5);
+}
+
+/* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -33,12 +28,8 @@ body {
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .animate-fade-in {
@@ -49,14 +40,36 @@ body {
     animation: fadeInUp 0.8s ease-out forwards;
 }
 
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
+/* Selection styling */
+::selection {
+    background-color: rgba(203, 166, 247, 0.3);
+    color: #cdd6f4;
+}
 
-/* Navigation active state */
-.nav-active {
-    color: #fbbf24 !important; /* amber-400 */
-    background-color: rgba(55, 65, 81, 0.5); /* gray-700/50 */
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #181825;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #585b70;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6c7086;
+}
+
+/* Focus styles */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #b4befe;
+    outline-offset: 2px;
 }
 
 /* Smooth image transitions */
@@ -64,57 +77,25 @@ img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-img:hover {
-    transform: scale(1.02);
+/* Link hover effects */
+a {
+    transition: color 0.2s ease;
 }
 
-/* Link underline animation */
-.link-animated {
-    position: relative;
-    text-decoration: none;
+/* Card hover lift effect */
+.group:hover {
+    transform: translateY(-2px);
 }
 
-.link-animated::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: currentColor;
-    transition: width 0.3s ease;
+.group {
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.link-animated:hover::after {
-    width: 100%;
+/* Table row hover */
+tr:hover td {
+    background-color: rgba(69, 71, 90, 0.3);
 }
 
-/* HTMX swap animations */
-.htmx-swapping {
-    opacity: 0;
-    transition: opacity 0.2s ease-out;
-}
-
-.htmx-added {
-    opacity: 0;
-    animation: fadeInUp 0.4s ease-out forwards;
-}
-
-/* Mobile menu improvements */
-@media (max-width: 640px) {
-    .mobile-stack {
-        flex-direction: column !important;
-    }
-    
-    .mobile-full-width {
-        width: 100% !important;
-    }
-    
-    .mobile-padding {
-        padding: 1rem !important;
-    }
-    
-    .mobile-text-center {
-        text-align: center !important;
-    }
+tr td {
+    transition: background-color 0.2s ease;
 }

@@ -1,87 +1,61 @@
-// Navigation state management
-document.addEventListener('DOMContentLoaded', function() {
-    updateActiveNav('home-selector');
-    setupMobileMenu();
-});
-
-document.addEventListener('htmx:afterSwap', function(evt) {
-    // Update active nav based on which content was loaded
-    const targetId = evt.detail.requestConfig.triggeringEvent?.target?.id;
-    if (targetId) {
-        updateActiveNav(targetId);
-    }
-});
-
-function updateActiveNav(activeId) {
-    // Map mobile IDs to desktop IDs and vice versa
-    const idMap = {
-        'home-selector': ['home-selector', 'mobile-home-selector'],
-        'about-selector': ['about-selector', 'mobile-about-selector'],
-        'projects-selector': ['projects-selector', 'mobile-projects-selector'],
-        'mobile-home-selector': ['home-selector', 'mobile-home-selector'],
-        'mobile-about-selector': ['about-selector', 'mobile-about-selector'],
-        'mobile-projects-selector': ['projects-selector', 'mobile-projects-selector'],
-    };
-    
-    const allIds = ['home-selector', 'about-selector', 'projects-selector', 'mobile-home-selector', 'mobile-about-selector', 'mobile-projects-selector'];
-    const activeIds = idMap[activeId] || [];
-    
-    allIds.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) {
-            if (activeIds.includes(id)) {
-                el.classList.remove('text-gray-300');
-                el.classList.add('nav-active', 'text-primary');
-            } else {
-                el.classList.remove('nav-active', 'text-primary');
-                el.classList.add('text-gray-300');
-            }
-        }
-    });
-}
-
-// Handle nav clicks
-document.addEventListener('click', function(e) {
-    const target = e.target.closest('.nav-item, .mobile-nav-item');
-    if (target) {
-        updateActiveNav(target.id);
-    }
-});
-
-// Mobile menu functionality
-function setupMobileMenu() {
-    const menuButton = document.getElementById('mobile-menu-button');
+// Navigation scroll spy and mobile menu
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
-    
-    if (menuButton && mobileMenu) {
-        menuButton.addEventListener('click', function() {
-            const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
-            menuButton.setAttribute('aria-expanded', !isExpanded);
+
+    // Mobile menu toggle
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+            const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !expanded);
             mobileMenu.classList.toggle('hidden');
-            
-            // Toggle icon between hamburger and X
-            const svg = menuButton.querySelector('svg');
-            if (isExpanded) {
-                svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
-            } else {
-                svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
-            }
         });
     }
-}
 
-function closeMobileMenu() {
-    const menuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    if (menuButton && mobileMenu) {
-        menuButton.setAttribute('aria-expanded', 'false');
-        mobileMenu.classList.add('hidden');
-        
-        // Reset to hamburger icon
-        const svg = menuButton.querySelector('svg');
-        if (svg) {
-            svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
-        }
-    }
-}
+    // Close mobile menu when clicking a link
+    window.closeMobileMenu = () => {
+        if (mobileMenuButton) mobileMenuButton.setAttribute('aria-expanded', 'false');
+        if (mobileMenu) mobileMenu.classList.add('hidden');
+    };
+
+    // Scroll spy for navigation highlighting
+    const observerOptions = {
+        root: null,
+        rootMargin: '-50% 0px -50% 0px',
+        threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                    link.classList.remove('active', 'text-ctp-lavender', 'bg-ctp-surface0');
+                    link.classList.add('text-ctp-subtext0');
+                    if (link.getAttribute('href') === `#${id}`) {
+                        link.classList.add('active', 'text-ctp-lavender', 'bg-ctp-surface0');
+                        link.classList.remove('text-ctp-subtext0');
+                    }
+                });
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
