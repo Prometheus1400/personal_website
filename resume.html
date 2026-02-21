@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kaleb Dickerson - Resume</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #1e1e2e;
+            background: white;
+            padding: 40px;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .header { text-align: center; margin-bottom: 20px; }
+        .header h1 { font-size: 24pt; margin-bottom: 8px; color: #11111b; }
+        .contact { font-size: 9pt; color: #45475a; }
+        .contact a { color: #cba6f7; text-decoration: none; }
+        
+        h2 {
+            font-size: 11pt;
+            color: #11111b;
+            border-bottom: 2px solid #cba6f7;
+            margin-top: 18px;
+            margin-bottom: 10px;
+            padding-bottom: 3px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .job { margin-bottom: 14px; }
+        .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px; }
+        .company { font-weight: 600; font-size: 10.5pt; color: #1e1e2e; }
+        .date { font-size: 9pt; color: #6c7086; }
+        .title { font-style: italic; color: #45475a; font-size: 9.5pt; margin-bottom: 5px; }
+        
+        ul { margin-left: 18px; }
+        li { margin-bottom: 3px; }
+        
+        .project { margin-bottom: 10px; }
+        .project-name { font-weight: 600; color: #1e1e2e; }
+        .tech { color: #6c7086; font-size: 9pt; }
+        
+        .education { display: flex; justify-content: space-between; }
+        .school { font-weight: 600; }
+        
+        @media print {
+            body { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Kaleb Dickerson</h1>
+        <div class="contact">
+            (512) 801-1561 | kaleb.stormblessed@gmail.com | 
+            <a href="https://linkedin.com/in/kaleb-dickerson2023">linkedin.com/in/kaleb-dickerson2023</a> | 
+            <a href="https://github.com/Prometheus1400">github.com/Prometheus1400</a>
+        </div>
+    </div>
+
+    <h2>Experience</h2>
+    
+    <div class="job">
+        <div class="job-header">
+            <span class="company">Snowflake</span>
+            <span class="date">Jul 2025 – Present</span>
+        </div>
+        <div class="title">Software Engineer – Machine Learning Platform | Menlo Park, CA</div>
+        <ul>
+            <li>Enabled inference directly within Snowflake Dynamic Tables by adding function volatility support to snowflake-ml-python</li>
+            <li>Designed an extensible tool-handling framework and implemented Cortex Agent and generic tools, contributing to the launch of the Snowflake MCP server</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <div class="job-header">
+            <span class="company">Apple</span>
+            <span class="date">May 2023 – Jul 2025</span>
+        </div>
+        <div class="title">Software Engineer – Applied Machine Learning | Austin, TX</div>
+        <ul>
+            <li>Architected and independently developed a critical new data ingestion service on a modern stack (JDK 21, Spring Boot, MongoDB, Kafka, Redis), replacing a legacy solution to significantly improve developer accessibility, enhance platform stability via local integration tests, and decrease feature development turnaround time</li>
+            <li>Increased generative AI platform accuracy by 7% via semantic chunking during data ingestion, enabling more context-aware retrieval</li>
+            <li>Architected custom Flink connectors for the internal Generative AI ingestion platform that facilitated data integration; over 40 teams across Apple now utilize the solution</li>
+            <li>Reduced resource consumption by 50% while delivering critical order updates to millions of customers by designing and integrating a custom Kubernetes CRD and Operator for batch job parallelism</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <div class="job-header">
+            <span class="company">Texas A&M University</span>
+            <span class="date">Jun 2021 – Sep 2021</span>
+        </div>
+        <div class="title">Research Assistant - Graph Neural Networks | College Station, TX</div>
+        <ul>
+            <li>Reviewed academic literature and designed networks to excel at tasks such as 3D geometry prediction for molecules</li>
+            <li>Processed datasets of up to 120M molecules using PyTorch-based deep learning models</li>
+        </ul>
+    </div>
+
+    <h2>Education</h2>
+    <div class="education">
+        <div>
+            <span class="school">Texas A&M University</span> — Bachelor of Science in Computer Science, Minor in Mathematics
+        </div>
+        <span class="date">May 2023 | GPA: 3.95</span>
+    </div>
+
+    <h2>Projects</h2>
+    
+    <div class="project">
+        <span class="project-name">radiant</span> <span class="tech">| Go, LLVM</span><br>
+        Turing complete, strongly typed, compiled programming language with modern syntax and type inference supporting simple data types and functions. Implemented the compiler frontend in Go (tokenizer, Pratt parser, LLVM IR generator) based on "Crafting Interpreters," enabling optimization and compilation via Clang.
+    </div>
+
+    <div class="project">
+        <span class="project-name">fuzzy-finder</span> <span class="tech">| Rust, Nix</span><br>
+        Terminal-based fuzzy finder written from scratch in Rust using the Crossterm library for text-based UI. Built with real-time multi-selection and asynchronous non-blocking rendering.
+    </div>
+
+    <div class="project">
+        <span class="project-name">linux-shell</span> <span class="tech">| C++</span><br>
+        Linux shell that interacts with the OS using the POSIX standard. Supports process execution, piping, I/O redirection, background processes, $-sign expansion, and custom signal handling.
+    </div>
+
+    <div class="project">
+        <span class="project-name">markdown-latex-render.nvim</span> <span class="tech">| Neovim, Lua</span><br>
+        Neovim plugin to render LaTeX expressions inside of markdown files by parsing injected grammars via Treesitter and displaying generated images inline.
+    </div>
+</body>
+</html>
