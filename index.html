@@ -70,8 +70,9 @@
                     </button>
                 </div>
                 
-                <!-- Social Links -->
+                <!-- Right side: Social + Mobile menu button -->
                 <div class="flex items-center gap-3">
+                    <!-- Social Links (always visible) -->
                     <a href="https://github.com/Prometheus1400" 
                         target="_blank"
                         rel="noopener noreferrer"
@@ -97,7 +98,49 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
                     </a>
+                    
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-button" 
+                        type="button"
+                        class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-800 hover:text-white focus:outline-none sm:hidden"
+                        aria-controls="mobile-menu"
+                        aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
                 </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden sm:hidden border-t border-gray-800 bg-gray-900">
+            <div class="space-y-1 px-4 py-3">
+                <button id="mobile-home-selector" 
+                    hx-get="home.html" 
+                    hx-target="#page" 
+                    hx-swap="innerHTML transition:true"
+                    class="mobile-nav-item block w-full rounded-md px-3 py-2 text-left text-base font-medium text-primary hover:bg-gray-800"
+                    onclick="closeMobileMenu()">
+                    Home
+                </button>
+                <button id="mobile-about-selector" 
+                    hx-get="about.html" 
+                    hx-target="#page"
+                    hx-swap="innerHTML transition:true"
+                    class="mobile-nav-item block w-full rounded-md px-3 py-2 text-left text-base font-medium text-gray-300 hover:bg-gray-800 hover:text-white"
+                    onclick="closeMobileMenu()">
+                    About
+                </button>
+                <button id="mobile-projects-selector" 
+                    hx-get="projects.html" 
+                    hx-target="#page"
+                    hx-swap="innerHTML transition:true"
+                    class="mobile-nav-item block w-full rounded-md px-3 py-2 text-left text-base font-medium text-gray-300 hover:bg-gray-800 hover:text-white"
+                    onclick="closeMobileMenu()">
+                    Projects
+                </button>
             </div>
         </div>
     </nav>
