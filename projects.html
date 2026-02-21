@@ -16,40 +16,144 @@
             </p>
         </div>
         
-        <!-- Featured Project -->
-        <div class="animate-fade-in-up delay-200 mt-10">
-            <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-8 transition-all hover:shadow-2xl hover:shadow-primary/10">
+        <!-- Project Cards Grid -->
+        <div class="animate-fade-in-up delay-200 mt-10 grid gap-6 sm:grid-cols-2">
+            
+            <!-- markdown-latex-render.nvim -->
+            <a href="https://github.com/Prometheus1400/markdown-latex-render.nvim" 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-6 transition-all hover:shadow-2xl hover:shadow-primary/10">
+                <div class="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
+                
+                <div class="relative">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/20">
+                                <svg class="h-5 w-5 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white">markdown-latex-render.nvim</h3>
+                        </div>
+                        <span class="flex items-center gap-1 text-sm text-yellow-400">
+                            <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            21
+                        </span>
+                    </div>
+                    
+                    <p class="mt-3 text-sm text-gray-300">
+                        A Neovim plugin that renders LaTeX equations in markdown files. Generates PNGs using matplotlib and displays them via image.nvim. Supports automatic rendering on buffer open and rerendering on write.
+                    </p>
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="rounded-full bg-blue-500/20 px-2.5 py-0.5 text-xs text-blue-300">Lua</span>
+                        <span class="rounded-full bg-gray-700 px-2.5 py-0.5 text-xs text-gray-300">Neovim</span>
+                        <span class="rounded-full bg-gray-700 px-2.5 py-0.5 text-xs text-gray-300">LaTeX</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- remux -->
+            <a href="https://github.com/Prometheus1400/remux" 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-6 transition-all hover:shadow-2xl hover:shadow-primary/10">
+                <div class="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
+                
+                <div class="relative">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/20">
+                                <svg class="h-5 w-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white">remux</h3>
+                        </div>
+                        <span class="flex items-center gap-1 text-sm text-yellow-400">
+                            <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            3
+                        </span>
+                    </div>
+                    
+                    <p class="mt-3 text-sm text-gray-300">
+                        A modern, opinionated terminal multiplexer written in Rust. Aimed to be a tmux replacement with a clean configuration format, real plugin system, and predictable defaults that work out of the box.
+                    </p>
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="rounded-full bg-orange-500/20 px-2.5 py-0.5 text-xs text-orange-300">Rust</span>
+                        <span class="rounded-full bg-gray-700 px-2.5 py-0.5 text-xs text-gray-300">Terminal</span>
+                        <span class="rounded-full bg-gray-700 px-2.5 py-0.5 text-xs text-gray-300">CLI</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- RadiantCpp -->
+            <a href="https://github.com/Prometheus1400/RadiantCpp" 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-6 transition-all hover:shadow-2xl hover:shadow-primary/10">
                 <div class="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
                 
                 <div class="relative">
                     <div class="flex items-center gap-3">
-                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-                            <svg class="h-6 w-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/20">
+                            <svg class="h-5 w-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
                             </svg>
                         </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-white">Personal Website</h3>
-                            <p class="text-sm text-gray-400">This very site you're looking at</p>
-                        </div>
+                        <h3 class="text-lg font-semibold text-white">RadiantCpp</h3>
                     </div>
                     
-                    <p class="mt-4 text-gray-300">
-                        A minimalist personal website built with vanilla HTML, Tailwind CSS, and HTMX. 
-                        No frameworks, no build step — just clean, fast, semantic HTML with progressive enhancement.
+                    <p class="mt-3 text-sm text-gray-300">
+                        A C++ project exploring systems programming concepts. Building foundational tools and utilities to deepen understanding of modern C++ and low-level programming.
                     </p>
                     
                     <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="rounded-full bg-gray-700 px-3 py-1 text-xs text-gray-300">HTML5</span>
-                        <span class="rounded-full bg-gray-700 px-3 py-1 text-xs text-gray-300">Tailwind CSS</span>
-                        <span class="rounded-full bg-gray-700 px-3 py-1 text-xs text-gray-300">HTMX</span>
+                        <span class="rounded-full bg-purple-500/20 px-2.5 py-0.5 text-xs text-purple-300">C++</span>
+                        <span class="rounded-full bg-gray-700 px-2.5 py-0.5 text-xs text-gray-300">Systems</span>
                     </div>
                 </div>
-            </div>
+            </a>
+
+            <!-- base64_encoder -->
+            <a href="https://github.com/Prometheus1400/base64_encoder" 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-6 transition-all hover:shadow-2xl hover:shadow-primary/10">
+                <div class="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
+                
+                <div class="relative">
+                    <div class="flex items-center gap-3">
+                        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-yellow-500/20">
+                            <svg class="h-5 w-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white">base64_encoder</h3>
+                    </div>
+                    
+                    <p class="mt-3 text-sm text-gray-300">
+                        A simple CLI utility for Base64 encoding and decoding, written in Zig. Reads from stdin and outputs to stdout. A learning project to explore Zig's systems programming capabilities.
+                    </p>
+                    
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="rounded-full bg-yellow-500/20 px-2.5 py-0.5 text-xs text-yellow-300">Zig</span>
+                        <span class="rounded-full bg-gray-700 px-2.5 py-0.5 text-xs text-gray-300">CLI</span>
+                        <span class="rounded-full bg-gray-700 px-2.5 py-0.5 text-xs text-gray-300">Encoding</span>
+                    </div>
+                </div>
+            </a>
+
         </div>
         
         <!-- More on GitHub CTA -->
-        <div class="animate-fade-in-up delay-300 mt-8 text-center">
+        <div class="animate-fade-in-up delay-300 mt-10 text-center">
             <a href="https://github.com/Prometheus1400" 
                 target="_blank"
                 rel="noopener noreferrer"
